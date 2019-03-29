@@ -1,0 +1,596 @@
+            @font-face {
+        font-family: 'ailerons';
+        font-style: normal;
+        font-weight: normal;
+        src: local('ailerons.otf'), url('http://triuxui.com/ailerons.otf') format('truetype');
+    }
+
+html {
+    color: white;
+    font-family: 'ailerons', serif;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/*NAV BAR */
+nav {
+    height: 9rem;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    width: 3.13rem;
+    opacity: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 2rem;
+    cursor: pointer;
+}
+
+nav ul li a::before {
+    color: #fff;
+    content: ' \25CF';
+    font-size: 2rem;
+}
+
+nav ul li a:hover::before {
+    color: #d38893;
+}
+
+
+
+
+
+
+/*SOUND BUTTON */
+
+#sound_button.active {
+    width: 25px;
+    animation: waving 0.7s infinite ease-in-out alternate;
+}
+
+#sound_button {
+    width: 25px;
+    margin-top: 5rem;
+    cursor: pointer;
+    animation: fadeInText 1s ease-in-out 0s forwards;
+}
+
+#intro_page {
+    height: 100vh;
+    background-color: #222;
+    padding-top: -10rem;
+    margin: 0;
+    background-color: #1d1d1e;
+}
+
+
+
+
+
+
+
+
+
+/*JOANNE SIGNATURE */
+
+.svg-path {
+    position: relative;
+    top: -9.3rem;
+    opacity: 0;
+    cursor: pointer;
+    animation: fadeInText 4s ease-in-out 2s forwards;
+}
+
+.pink {
+    padding-top: 20px;
+}
+
+.svg-path svg #glow {
+    stroke: pink;
+    filter: url(#blur-filter);
+}
+
+.svg-path #color {
+    stroke: pink;
+    animation: signature 0.1s linear infinite;
+}
+
+.svg-path svg #glow2 {
+    stroke: pink;
+    filter: url(#blur-filter);
+}
+
+.svg-path #color2 {
+    stroke: pink;
+    animation: signature 0.1s linear infinite;
+}
+
+
+@keyframes signature {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tour_info {
+    margin: 5rem 0;
+    line-height: 2rem;
+}
+
+.tour_info .title h1 {
+    font-size: 4.5rem;
+    opacity: 0;
+    animation: fadeInText 4s ease-in-out 1s forwards;
+}
+
+.tour_info .title h2 {
+    font-size: 2.3rem;
+    margin-top: 5rem;
+    opacity: 0;
+    animation: fadeInText 4s ease-in-out 3s forwards;
+}
+
+.date_location {
+    margin-top: 5rem;
+    opacity: 0;
+    line-height: 1.1rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.3rem;
+    animation: fadeInText 4s ease-in-out 3.5s forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* DAVID BOWIE SECTION */
+
+#davidbowie {
+    position: relative;
+    background: linear-gradient(to bottom, #1d1d1e, #385260);
+    height: 100vh;
+    padding-bottom: -5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title2 {
+    line-height: 1rem;
+    z-index: 10;
+}
+
+.title2 h1 {
+    font-size: 3.5rem;
+}
+
+.title2 h2 {
+    font-size: 3rem;
+}
+
+.thunder {
+    position: absolute;
+    max-width: 230px;
+    padding: 8px 30px;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.thunder:hover #blue {
+    animation: blue 0.1s ease-out forwards alternate;
+}
+
+.thunder:hover #orange {
+    animation: orange 0.1s ease-out forwards alternate;
+}
+
+@keyframes blue {
+    100% {
+        transform: translate(5px, 10px);
+    }
+}
+
+@keyframes orange {
+    100% {
+        transform: translate(15px, 4px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*JOANNE SECTION */
+
+#joanne {
+    background: linear-gradient(to bottom, #385260, #02343E);
+    margin-top: -1rem;
+}
+
+.title3 {
+    line-height: 1rem;
+}
+
+.title3 h1 {
+    font-size: 4rem;
+}
+
+.title3 h2 {
+    font-size: 2.4rem;
+}
+
+.joannehat {
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.applemusic,
+.spotify {
+    max-width: 100px;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* JOHN WAYNE SECTION */
+
+#johnwayne {
+    background: linear-gradient(to bottom, #02343E, #6D304C);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.title1 {
+    line-height: 1rem;
+    padding-top: 1rem;
+    z-index: 10;
+    position: relative;
+}
+
+.title1 h1 {
+    font-size: 4.5rem;
+    padding-top: 7rem;
+}
+
+.title1 h2 {
+    font-size: 3rem;
+}
+
+.johnhat {
+    width: 300px;
+    transform: rotate(-22deg);
+    left: 50%;
+    margin-left: -200px;
+    bottom: 16rem;
+    position: absolute;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.guitar {
+    width: 200px;
+    cursor: pointer;
+    z-index: 0;
+    position: absolute;
+    bottom: -16rem;
+    left: 50%;
+    margin-left: -100px;
+}
+
+#johnwayne:hover #lefthat {
+    cursor: pointer;
+    animation: johnwayne 1s forwards;
+}
+
+#johnwayne:hover #righthat {
+    cursor: pointer;
+    animation: righthat 1s forwards;
+}
+
+#johnwayne {
+    cursor: pointer;
+}
+
+@keyframes johnwayne {
+    100% {
+        transform: rotate(10deg);
+        transform-origin: 50% 1%;
+    }
+}
+
+@keyframes righthat {
+    100% {
+        transform: rotate(-10deg);
+        transform-origin: 60% 10%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  Pink Guitar*/
+
+#string1 {
+    width: 10px;
+    margin: 10px;
+}
+
+#string2 {
+    padding: 10px;
+}
+
+#string3 {
+    padding: 10px;
+}
+
+#string4 {
+    padding: 10px;
+}
+
+#string5 {
+    padding: 10px;
+}
+
+#string6 {
+    padding: 10px;
+}
+
+#string1:hover {
+    opacity: 0;
+}
+
+#string2:hover {
+    opacity: 0;
+}
+
+#string3:hover {
+    opacity: 0;
+}
+
+#string4:hover {
+    opacity: 0;
+}
+
+#string5:hover {
+    opacity: 0;
+}
+
+#string6:hover {
+    opacity: 0;
+}
+
+@keyframes waving {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 480px) {
+    /*INTRO PAGE*/
+    .title {
+        line-height: 0.05rem;
+    }
+    .svg-path {
+        text-align: center;
+        margin-top: 10rem;
+    }
+    .date_location {
+        margin-top: 1rem;
+    }
+    /*DAVID BOWIE*/
+    #davidbowie {
+        /*height: 120vh;*/
+    }
+    .thunder {
+        max-width: 300px;
+    }
+    /* JOANNE */
+    .joannehat {
+        max-width: 500px;
+    }
+    /*JOHN WAYNE */
+    .johnhat {
+        width: 300px;
+        margin-left: -200px;
+        bottom: 23rem;
+        /*max-width: 270px;
+                    transform: rotate(-22deg);
+                    right: 7rem;
+                    top: 154rem;
+                    position: absolute;
+                    cursor: pointer;*/
+    }
+    .guitar {
+        /*max-width: 400px;
+                    cursor: pointer;
+                    position: absolute;*/
+        bottom: -10rem;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+@media screen and (min-width: 768px) {
+        nav {
+            opacity: 1;
+        }
+        
+        /* INTRO PAGE */
+        .date_location {
+            margin-top: -8rem;
+            line-height: 1.1rem;
+            font-size: 1.6rem;
+            letter-spacing: -0.3rem;
+        }
+        
+        /*DAVID BOWIE */
+        #davidbowie {
+            /*height: 120vh;*/
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+@media screen and (min-width: 1280px) {
+        /* INTRO PAGE */
+        .svg-path svg {
+            position: relative;
+            max-width: 1200px;
+        }
+        .pink {
+            padding-top: 27px;
+        }
+        .date_location {
+            margin-top: -9.5rem;
+            line-height: 1.1rem;
+            font-size: 1.6rem;
+            letter-spacing: -0.3rem;
+        }
+        /*DAVID BOWIE */
+        #davidbowie {
+            /*height: 150vh;*/
+        }
+        .title2 {
+            line-height: 1rem;
+            /*padding-top: 12rem;*/
+        }
+        .title2 h1 {
+            font-size: 5.5rem;
+        }
+        .title2 h2 {
+            font-size: 4.5rem;
+        }
+        .title2 h3 {
+            font-size: 1.8rem;
+        }
+        .thunder {
+            max-width: 450px;
+        }
+        /*JOANNE */
+        #joanne {
+            height: 130vh;
+        }
+        .title2 {
+            line-height: 1rem;
+            /*padding-top: 12rem;*/
+        }
+        .title3 h1 {
+            font-size: 5.5rem;
+        }
+        .title3 h2 {
+            font-size: 3.7rem;
+        }
+        .joannehat {
+            max-width: 700px;
+            z-index: -1;
+        }
+        /*JOHN WAYNE */
+        .title1 h1 {
+            font-size: 6.5rem;
+        }
+        .title1 h2 {
+            font-size: 4rem;
+        }
+        .johnhat {
+            width: 400px;
+            margin-left: -260px;
+            bottom: 30rem;
+        }
+        .guitar {
+            /*max-width: 200px;
+                        position: relative;
+                        left: 3rem;
+                        top: -9rem;*/
+            bottom: -3rem;
+        }

@@ -1,0 +1,156 @@
+/* Lady Gaga Joanne Hat */
+
+#outline {
+    opacity: 0;
+}
+
+#hat:hover #outline {
+    animation: outline 1s forwards;
+}
+
+@keyframes outline {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1.0;
+    }
+}
+
+
+/* JOHNWAYNE SECTION*/
+
+#johnwayne:hover #lefthat {
+    cursor: pointer;
+    animation: johnwayne 1s forwards;
+}
+
+#johnwayne:hover #righthat {
+    cursor: pointer;
+    animation: righthat 1s forwards;
+}
+
+#johnwayne {
+    cursor: pointer;
+}
+
+@keyframes johnwayne {
+    100% {
+        transform: rotate(10deg);
+        transform-origin: 50% 1%;
+    }
+}
+
+@keyframes righthat {
+    100% {
+        transform: rotate(-10deg);
+        transform-origin: 60% 10%;
+    }
+}
+
+
+/*  Pink Guitar*/
+
+#string1 {
+    width: 10px;
+    margin: 10px;
+}
+
+#string2 {
+    padding: 10px;
+}
+
+#string3 {
+    padding: 10px;
+}
+
+#string4 {
+    padding: 10px;
+}
+
+#string5 {
+    padding: 10px;
+}
+
+#string6 {
+    padding: 10px;
+}
+
+#string1:hover {
+    opacity: 0;
+}
+
+#string2:hover {
+    opacity: 0;
+}
+
+#string3:hover {
+    opacity: 0;
+}
+
+#string4:hover {
+    opacity: 0;
+}
+
+#string5:hover {
+    opacity: 0;
+}
+
+#string6:hover {
+    opacity: 0;
+}
+
+
+/*APPLE MUSIC LOGO */
+
+#apple2 {
+    animation: apple 2s linear 0s infinite alternate;
+}
+
+
+@keyframes apple {
+    0% {
+        transform: rotateY(0deg);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        transform: rotateY(180deg);
+        transform-origin: 50% 50%;
+    }
+}
+
+
+/*SPOTIFY */
+
+.spotify_logo:hover {
+    cursor: pointer;
+}
+
+#firststripe {
+    animation: stripes 3.5s linear 0s infinite;
+}
+
+#secondstripe {
+    animation: stripes 3.5s linear 0s infinite;
+}
+
+#thirdstripe {
+    animation: stripes 3.5s linear 0s infinite;
+}
+
+@keyframes stripes {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 50% 50%;
+    }
+}
